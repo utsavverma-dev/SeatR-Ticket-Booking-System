@@ -1,6 +1,6 @@
-# BookIT - Premium Ticket Booking System
+# SeatR - Premium Ticket Booking System
 
-BookIT is a modern, full-stack event and ticket booking platform designed with a sleek aesthetic. 
+SeatR is a modern, full-stack event and ticket booking platform designed with a sleek aesthetic. 
 
 This repository contains the complete source code for the project, cleanly separated into a Spring Boot Backend and a React Frontend.
 

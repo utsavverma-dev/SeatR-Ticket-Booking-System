@@ -66,7 +66,7 @@ export default function Login() {
         <div className="glass-card rounded-3xl p-8">
           <div className="mb-8 text-center">
             <h1 className="text-3xl font-extrabold text-stone-100 tracking-tight font-[Montserrat]">Welcome back</h1>
-            <p className="mt-3 text-sm text-stone-400">Sign in to your BookIT account</p>
+            <p className="mt-3 text-sm text-stone-400">Sign in to your SeatR account</p>
           </div>
 
           {apiError && (

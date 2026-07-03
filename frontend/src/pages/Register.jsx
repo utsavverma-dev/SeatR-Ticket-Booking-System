@@ -76,7 +76,7 @@ export default function Register() {
         <div className="glass-card rounded-3xl p-8">
           <div className="mb-8 text-center">
             <h1 className="text-3xl font-extrabold text-stone-100 tracking-tight font-[Montserrat]">Create your account</h1>
-            <p className="mt-3 text-sm text-stone-400">Join BookIT and start booking events</p>
+            <p className="mt-3 text-sm text-stone-400">Join SeatR and start booking events</p>
           </div>
 
           {apiError && (

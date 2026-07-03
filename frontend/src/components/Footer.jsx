@@ -11,7 +11,7 @@ const Footer = () => {
             <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-amber-500 to-amber-700 shadow-lg shadow-amber-500/20">
               <span className="text-stone-900 font-bold text-sm">B</span>
             </div>
-            BookIT
+            SeatR
           </span>
           <p className="mt-3 text-sm max-w-sm text-stone-500">The premium platform for immersive events and VIP concert experiences. Designed for those who value elegance.</p>
         </div>
@@ -23,7 +23,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 border-t border-stone-800 pt-8 text-xs text-center text-stone-600">
-        &copy; {new Date().getFullYear()} BookIT. Crafted with elegance.
+        &copy; {new Date().getFullYear()} SeatR. Crafted with elegance.
       </div>
       <HelpCentre isOpen={isHelpOpen} onClose={() => setIsHelpOpen(false)} />
     </footer>

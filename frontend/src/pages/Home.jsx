@@ -49,7 +49,7 @@ export default function Home() {
       <section className="py-20 mesh-bg">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-4xl font-extrabold text-stone-100 tracking-tight font-[Montserrat]">Why BookIT?</h2>
+            <h2 className="text-4xl font-extrabold text-stone-100 tracking-tight font-[Montserrat]">Why SeatR?</h2>
             <p className="mt-3 text-lg text-stone-400">Everything you need for a seamless event experience.</p>
           </div>
 
@@ -93,7 +93,7 @@ export default function Home() {
         <div className="relative mx-auto max-w-7xl px-4 py-20 text-center sm:px-6 lg:px-8">
           <h2 className="text-3xl font-extrabold text-stone-100 tracking-tight font-[Montserrat]">Ready to find your next event?</h2>
           <p className="mt-4 text-lg text-stone-400">
-            Join thousands of event-goers who trust BookIT.
+            Join thousands of event-goers who trust SeatR.
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link to="/events" className="btn-glow px-8 py-3 text-base shadow-[0_0_30px_rgba(217,119,6,0.2)]">

@@ -36,7 +36,7 @@ This repository contains the complete, submission-ready source code — cleanly 
 ## 📂 Project Structure
 
 ```
-SeatR/
+SeatR-Ticket-Booking-System/
 ├── backend/     → Spring Boot (Java) REST API
 └── frontend/    → React (Vite) Single Page Application
 ```
@@ -89,6 +89,17 @@ A fast, responsive Single Page Application delivering an immersive, role-aware U
 </td>
 </tr>
 </table>
+
+---
+
+## 📐 System Design
+
+The SeatR application follows a classic client-server architecture with separation of concerns between the presentation layer and the business logic/data layer.
+
+- **Presentation Layer (Client):** A React SPA built with Vite. It manages state internally and communicates with the backend via RESTful API calls using Axios. It employs role-based conditional rendering to provide tailored interfaces for Customers, Organisers, and Admins.
+- **Application Layer (Server):** A Spring Boot application providing REST endpoints. It handles request validation, business logic execution (like seat availability checks and booking processing), and asynchronous tasks (like email notification dispatching).
+- **Security Layer:** Implemented via Spring Security. All API requests are intercepted to validate JSON Web Tokens (JWT) ensuring the user is authenticated and authorized for the requested resource.
+- **Data Layer:** PostgreSQL relational database accessed through Spring Data JPA and Hibernate. It manages complex relationships between Users, Venues, Events, Tickets, and Waitlists, ensuring ACID compliance during high-concurrency booking scenarios.
 
 ---
 

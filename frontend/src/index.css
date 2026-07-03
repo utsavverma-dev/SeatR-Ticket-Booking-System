@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+@theme {
+  --font-inter: "Inter", sans-serif;
+  --font-montserrat: "Montserrat", sans-serif;
+  --color-primary-50: var(--color-amber-50);
+  --color-primary-100: var(--color-amber-100);
+  --color-primary-200: var(--color-amber-200);
+  --color-primary-300: var(--color-amber-300);
+  --color-primary-400: var(--color-amber-400);
+  --color-primary-500: var(--color-amber-500);
+  --color-primary-600: var(--color-amber-600);
+  --color-primary-700: var(--color-amber-700);
+  --color-primary-800: var(--color-amber-800);
+  --color-primary-900: var(--color-amber-900);
+  --color-primary-950: var(--color-amber-950);
+}
+
+@layer base {
+  body {
+    font-family: var(--font-inter);
+    @apply bg-stone-950 text-stone-100;
+  }
+}
+
+@layer utilities {
+  /* Custom Scrollbar */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-stone-700 rounded-full;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-stone-600;
+  }
+
+  /* Glassmorphism */
+  .glass {
+    @apply bg-stone-900/60 backdrop-blur-md border-b border-amber-900/30;
+  }
+  
+  .glass-card {
+    @apply bg-stone-900/50 backdrop-blur-lg border border-amber-900/20 shadow-2xl shadow-black/50;
+  }
+
+  /* Mesh Gradient Background - Warm Earth Tones */
+  .mesh-bg {
+    background-color: #0c0a09; /* stone-950 */
+    background-image: 
+      radial-gradient(at 0% 0%, hsla(28, 60%, 15%, 1) 0, transparent 50%), 
+      radial-gradient(at 50% 0%, hsla(15, 60%, 15%, 1) 0, transparent 50%), 
+      radial-gradient(at 100% 0%, hsla(35, 60%, 15%, 1) 0, transparent 50%);
+  }
+
+  /* Custom Glow Accents */
+  .glow-primary {
+    @apply shadow-[0_0_30px_rgba(217,119,6,0.3)] border border-amber-500/30;
+  }
+  .glow-accent {
+    @apply shadow-[0_0_30px_rgba(245,158,11,0.3)] border border-amber-400/30;
+  }
+
+  /* Form Elements */
+  .form-label {
+    @apply block text-sm font-medium text-stone-300 mb-1;
+  }
+
+  .form-input, .input-field {
+    @apply w-full rounded-xl border border-stone-700 bg-stone-800/50 px-4 py-2.5 text-stone-100 placeholder-stone-500 shadow-inner focus:border-amber-500 focus:bg-stone-800 focus:outline-none focus:ring-2 focus:ring-amber-500/20 transition-all duration-200;
+  }
+
+  .form-error {
+    @apply mt-1 text-sm text-rose-400;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-xl bg-amber-600 px-6 py-2.5 text-sm font-semibold text-stone-900 shadow-lg shadow-amber-600/30 transition-all duration-300 hover:bg-amber-500 hover:shadow-amber-500/40 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 focus:ring-offset-stone-900 disabled:opacity-50 disabled:pointer-events-none;
+  }
+  
+  .btn-glow {
+    @apply inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-amber-600 to-amber-500 px-6 py-2.5 text-sm font-bold text-stone-900 shadow-[0_0_20px_rgba(217,119,6,0.4)] transition-all duration-300 hover:shadow-[0_0_30px_rgba(217,119,6,0.6)] hover:-translate-y-1;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center rounded-xl border border-stone-700 bg-stone-800/30 px-6 py-2.5 text-sm font-semibold text-stone-200 transition-all duration-300 hover:bg-stone-800 hover:border-amber-500/50 hover:text-amber-400 hover:-translate-y-0.5;
+  }
+
+  /* Animations */
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out forwards;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
+}

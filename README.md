@@ -3,7 +3,7 @@
 <img src="https://img.shields.io/badge/Status-Active-success?style=for-the-badge" alt="Status" />
 <img src="https://img.shields.io/badge/Java-17+-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java" />
 <img src="https://img.shields.io/badge/Spring_Boot-3.x-6DB33F?style=for-the-badge&logo=springboot&logoColor=white" alt="Spring Boot" />
-<img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
+<img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
 <img src="https://img.shields.io/badge/React-18-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
 <img src="https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E" alt="Vite" />
 
@@ -59,7 +59,7 @@ The secure RESTful engine behind SeatR — handling business logic, database ope
 |---|---|
 | **Language** | Java 17+ |
 | **Framework** | Spring Boot 3.x |
-| **Database** | MySQL (Spring Data JPA / Hibernate) |
+| **Database** | PostgreSQL (Spring Data JPA / Hibernate) |
 | **Security** | Spring Security + JWT |
 
 **Core Features**
@@ -101,17 +101,26 @@ To run SeatR locally, you'll start both the backend and frontend servers. Follow
 - ☕ **Java 17 or 21** installed (`JAVA_HOME` configured)
 - 📦 **Maven** installed
 - 🟢 **Node.js** (v18+) and **npm** installed
-- 🐬 **MySQL Server** installed and running
+- 🐘 **PostgreSQL Server** installed and running
 
 ---
 
-### 🖥️ Part 1 — Running the Backend
+### 📥 Part 1 — Clone the Repository
+
+```bash
+git clone https://github.com/utsavverma-dev/SeatR-Ticket-Booking-System.git
+cd SeatR-Ticket-Booking-System
+```
+
+---
+
+### 🖥️ Part 2 — Running the Backend
 
 **1. Configure the Database**
 
-- Ensure your MySQL server is running locally
+- Ensure your PostgreSQL server is running locally (default port `5432`)
 - Create a database named `ticket_booking` *(or update `application.properties` to match your local setup)*
-- Verify the credentials in `backend/src/main/resources/application.properties` are correct (default is usually `root` / `password`)
+- Verify the credentials in `backend/src/main/resources/application.properties` are correct (default is usually `postgres` / `password`)
 
 **2. Start the Application**
 
@@ -128,7 +137,7 @@ mvn spring-boot:run
 
 ---
 
-### 🌐 Part 2 — Running the Frontend
+### 🌐 Part 3 — Running the Frontend
 
 **1. Install Dependencies**
 
